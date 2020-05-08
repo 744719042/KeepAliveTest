@@ -18,8 +18,8 @@ public class WatchDog {
     }
 
     public void startWatch() {
-        startChild();
+        startChild("" + android.os.Process.myUid());
     }
 
-    private native void startChild();
+    private native void startChild(String userId);
 }
