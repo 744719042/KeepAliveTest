@@ -50,14 +50,14 @@ public class RemoteService extends Service {
             public void onServiceDisconnected(ComponentName name) {
                 Log.i(TAG, "LocalService disconnected");
                 connectLocal(true);
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent activityIntent = new Intent(getApplicationContext(), MainActivity.class);
-                        activityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(activityIntent);
-                    }
-                },1500);
+//                handler.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        Intent activityIntent = new Intent(getApplicationContext(), MainActivity.class);
+//                        activityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        startActivity(activityIntent);
+//                    }
+//                },1500);
             }
         }, BIND_IMPORTANT);
     }
